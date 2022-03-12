@@ -3,12 +3,16 @@
 * {
     margin: 0;
     padding: 0;
-    border: none;}
+    border: none;
+}
+
 body {
     font-family: Lato, sans-serif;
     font-weight: 300;
     color: #3a3a3a;
 }
+
+/* headings and logo */
 
 h1, h2 {
     font-family: Oswald, sans-serif;
@@ -22,6 +26,8 @@ h1, h2 {
     font-size: 280%;
     margin-left: 30px;
 }
+
+/* navigation links */
 
 #menu {
     font-size: 110%;
@@ -51,15 +57,17 @@ h1, h2 {
     border-bottom: 1px solid #3a3a3a;
 }
 
+/* hero image and cover text */
+
 #hero-outer {
     height: 600px;
     width: 100%;
     overflow: hidden;
-    
+
     position: relative;
 }
 
-#cover-text, #cover-text h2{
+#cover-text, #cover-text h2 {
     color: #fff;
 }
 
@@ -67,17 +75,19 @@ h1, h2 {
     height: 600px;
     width: 100%;
     background: url('../images/hero-image.webp') no-repeat center center;
+
+    /* animates zoom effect on loading page */
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
-
 }
 
+/* creates the level of zoom for hero image */
 @keyframes hero-zoom {
-    from {
+    from{
         transform: scale(1);
     }
-    to {
+    to{
         transform: scale(1.1);
     }
 }
@@ -91,7 +101,6 @@ h1, h2 {
     width: 300px;
     height: 200px;
 
-    
     padding-top: 40px;
     padding-left: 10px;
 
@@ -103,6 +112,8 @@ h1, h2 {
     position: absolute;
 }
 
+/* club ethos */
+
 #club-ethos {
     height: 600px;
 }
@@ -111,20 +122,23 @@ h1, h2 {
     padding-top: 30px;
     width: 33%;
     float: left;
-    
 }
 
 #right-about {
     padding-top: 30px;
     width: 33%;
     float: right;
-    
 }
 
 #center-about {
     width: 33%;
     margin: 0 auto;
-    
+}
+
+hr {
+    border-top: 1px solid #3a3a3a;
+    width: 100%;
+    margin: 5px 0;
 }
 
 .left-about-heading {
@@ -141,12 +155,6 @@ h1, h2 {
     line-height: 20px;
     clear: both;
     margin-bottom: 50px;
-}
-
-hr {
-    border-top: 1px solid #3a3a3a;
-    width: 100%;
-    margin: 5px 0;
 }
 
 .right-about-heading h2 {
@@ -175,14 +183,15 @@ hr {
 }
 
 #circle-cover-bg {
-    background: url('..//images/ethos-center-image.jpg') no-repeat center center;
+    background: url('../images/ethos-center-image.jpg') no-repeat center center;
     height: 100%;
     border-radius: 50%;
 }
 
 /* event times */
+
 #times {
-    background-image: url('../images/dublin-city.webp');
+    background-image: url('../images/times-background.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -196,9 +205,9 @@ hr {
     width: 20%;
     height: 300px;
     float: left;
-    padding: 30px  0 0 10px;
+    padding: 30px 0 0 10px;
     text-align: center;
-    border: 3px solid #fff;
+    border: 2px solid white;
     box-sizing: border-box;
 }
 
@@ -225,21 +234,75 @@ footer {
     margin: 1%;
     padding: 5%;
     color: #3a3a3a;
-
 }
 
 /* gallery */
+
 #photos {
     clear: both;
     line-height: 0;
     column-count: 4;
-    column-gap: 0px;
+    column-gap: 0;
 }
 
 #photos > img {
     width: 100%;
-
 }
+
+.form-section {
+    clear: left;
+    background: url("https://codeinstitute.s3.amazonaws.com/FundamentalsProjects/HTML-CSS/formbg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+}
+
+.signup-form {
+    margin:150px 10% 0 0;
+    color:#fff;
+    background-color: rgba(60, 60, 60, 0.6);
+    max-width:400px;
+    position:absolute;
+    left:10%;
+    padding:30px;
+}
+
+.signup-form h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+}
+
+.text-input:hover {
+    border-color: #f16c6b;
+}
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px 15px 32px;
+    text-align: center;
+    font-size: 100%;
+    background-color: #f16c6b;
+    color: #fafafa;
+    display: block;
+}
+
+.join-button:hover {
+    background-color: #fafafa;
+    color: #f16c6b;
+}
+
+
 
 /* Media queries */
 
@@ -252,8 +315,8 @@ footer {
     }
 
     #welcome {
-        padding: 30px 0;   
-        margin: 0; 
+        padding: 30px 0;
+        margin: 0;
     }
 
     #left-about, #right-about {
@@ -281,8 +344,7 @@ footer {
     }
 }
 
-/* For medium sreen sizes from 950px wide and down */
-
+/* For medium screen sizes from 950px wide and down */
 @media screen and (max-width: 950px) {
 
     #menu {
@@ -291,7 +353,6 @@ footer {
         margin-left: 30px;
         margin-bottom: 20px;
         line-height: 25px;
-
     }
 
     #cover-text {
@@ -317,17 +378,5 @@ footer {
         text-align: center;
         padding: 0 20px;
     }
-
-    #photos {
-        column-count: 3;
-    }
-
 }
 
-/* For small screen sizes 800px and down*/
-
-@media screen and (max-width: 800px) {
-    #photos {
-        column-count: 2;
-    }
-}
